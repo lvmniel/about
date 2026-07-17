@@ -6,126 +6,132 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>currently obsessed ♡</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<title>currently obsessed</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-}
+/* ---------- PAGINA ---------- */
 
 body{
+    zoom:1;
+    background:#ffffff;
+    color:#2f2f2f;
+    font-family:Georgia, serif;
 
-margin:0;
+    max-width:700px;
+    margin:auto;
+    padding:50px 8px;
 
-background:#111;
-
-color:#ececec;
-
-font-family:"Cormorant Garamond",serif;
-
-padding:40px;
-
+    font-size:30px;
+    line-height:1.7;
 }
 
-.container{
-
-max-width:1000px;
-
-margin:auto;
-
-}
+/* ---------- TITOLO ---------- */
 
 h1{
-
-text-align:center;
-
-font-size:52px;
-
-font-weight:500;
-
-letter-spacing:1px;
-
-margin-bottom:5px;
-
+    font-size:78px;
+    margin-bottom:8px;
+    font-weight:bold;
 }
 
-.subtitle{
+/* ---------- DATA ---------- */
 
-text-align:center;
-
-font-style:italic;
-
-color:#b9b9b9;
-
-margin-bottom:40px;
-
+.info{
+    color:#808080;
+    font-size:33px;
+    margin-bottom:30px;
 }
+
+/* ---------- DIVISORI ---------- */
 
 .divider{
-
-text-align:center;
-
-font-size:20px;
-
-color:#800000;
-
-margin:30px 0;
-
+    display:block;
+    width:750px;
+    margin:auto;
+    margin-top:15px;
+    margin-bottom:60px;
 }
 
-.section{
+/* ---------- TITOLI ---------- */
 
-margin-bottom:45px;
-
+h2{
+    font-size:44px;
+    font-weight:normal;
+    margin-top:65px;
+    margin-bottom:25px;
+    color:#800000;
 }
 
-.section h2{
+/* ---------- TESTO ---------- */
 
-font-size:30px;
-
-font-weight:500;
-
-margin-bottom:18px;
-
-border-left:4px solid #800000;
-
-padding-left:12px;
-
+p{
+    margin-bottom:23px;
 }
+
+/* ---------- LINK ---------- */
+
+a{
+    color:#7a7a7a;
+    text-decoration:none;
+}
+
+a:hover{
+    color:black;
+}
+
+/* ---------- IMMAGINI ---------- */
+
+img{
+    max-width:100%;
+}
+
+/* =======================================================
+                    NUOVE CARD
+======================================================= */
 
 .grid{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(2,1fr);
 
-gap:18px;
+gap:16px;
+
+margin-top:25px;
+
+}
+
+/* Su schermi molto piccoli */
+
+@media(max-width:500px){
+
+.grid{
+
+gap:12px;
+
+}
 
 }
 
 .card{
 
-background:#181818;
+background:#2f2f2f;
 
-border:1px solid #800000;
+border-radius:18px;
 
-padding:12px;
+padding:14px;
 
 transition:.25s;
+
+box-shadow:0 5px 12px rgba(0,0,0,.08);
 
 }
 
 .card:hover{
 
-transform:translateY(-4px);
+transform:translateY(-3px);
 
-box-shadow:0 0 12px rgba(128,0,0,.45);
+box-shadow:0 8px 18px rgba(128,0,0,.20);
 
 }
 
@@ -137,243 +143,335 @@ aspect-ratio:1/1.25;
 
 object-fit:cover;
 
-border:1px solid #800000;
+border-radius:12px;
 
 margin-bottom:12px;
 
-}
-
-.title{
-
-font-size:24px;
-
-margin-bottom:10px;
+display:block;
 
 }
 
-.tags{
+.card-title{
 
-display:flex;
+font-size:22px;
 
-flex-wrap:wrap;
-
-gap:6px;
-
-margin-bottom:10px;
-
-}
-
-.tag{
-
-border:1px solid #800000;
-
-padding:2px 8px;
-
-font-size:13px;
-
-color:#ddd;
-
-}
-
-.quote{
-
-font-style:italic;
-
-font-size:16px;
-
-color:#bfbfbf;
-
-margin-top:10px;
-
-}
-
-.playlist{
-
-margin-top:20px;
-
-border:1px solid #800000;
-
-padding:18px;
-
-background:#181818;
-
-text-align:center;
-
-}
-
-.button{
-
-display:inline-block;
-
-margin-top:15px;
-
-padding:8px 18px;
-
-border:1px solid #800000;
-
-text-decoration:none;
+font-weight:bold;
 
 color:white;
 
-transition:.25s;
+line-height:1.2;
+
+margin-bottom:10px;
 
 }
 
-.button:hover{
+.status{
+
+display:inline-block;
 
 background:#800000;
 
+color:white;
+
+padding:4px 10px;
+
+border-radius:999px;
+
+font-size:14px;
+
+margin-bottom:10px;
+
 }
+
+.progress{
+
+font-size:17px;
+
+color:#d8d8d8;
+
+margin-bottom:10px;
+
+}
+
+.comment{
+
+font-size:16px;
+
+font-style:italic;
+
+color:#bdbdbd;
+
+line-height:1.4;
+
+}
+
+/* ---------- PLAYLIST ---------- */
+
+.playlist{
+
+background:#2f2f2f;
+
+border-radius:18px;
+
+padding:22px;
+
+margin-top:20px;
+
+text-align:center;
+
+box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.playlist p{
+
+color:#d8d8d8;
+
+font-size:20px;
+
+margin-bottom:20px;
+
+line-height:1.6;
+
+}
+
+.play-button{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#800000;
+
+color:white;
+
+border-radius:999px;
+
+font-size:18px;
+
+transition:.2s;
+
+}
+
+.play-button:hover{
+
+background:#5e0000;
+
+color:white;
+
+}
+
+/* ---------- FOOTER ---------- */
 
 .footer{
 
 text-align:center;
 
+font-size:20px;
+
+color:#777;
+
 margin-top:60px;
-
-font-size:14px;
-
-color:#999;
 
 }
 
 </style>
 
 </head>
-
 <body>
 
-<div class="container">
+<h1>𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲⋆‧₊˚</h1>
 
-<h1>currently obsessed ♡</h1>
+<div class="info">
+updated whenever i remember...
+</div>
 
-<p class="subtitle">
+<img class="divider"
+src="TUO-DIVISORE.png">
+
+
+<p style="text-align:center; color:#666; font-style:italic;">
 things currently haunting my brain...
 </p>
 
-<div class="divider">
-🦇 ★ 🦇 ★ 🦇
-</div>
 
-<div class="section">
-
-<h2>Anime</h2>
+<h2>
+<span>☾</span> <i>animanga</i>
+</h2>
 
 <div class="grid">
 
 <div class="card">
 
-<img src="naruto.jpg" class="cover">
+<img src="obito.jpg" class="cover">
 
-<div class="title">
+<div class="card-title">
 Naruto Shippuden
 </div>
 
-<div class="tags">
-
-<div class="tag">Watching</div>
-
-<div class="tag">317 / 500</div>
-
-<div class="tag">★★★★★</div>
-
+<div class="status">
+Watching
 </div>
 
-<div class="quote">
-"comfort anime."
+<div class="progress">
+Episode 317
+</div>
+
+<div class="comment">
+"comfort anime forever."
 </div>
 
 </div>
 
 <div class="card">
 
-<img src="frieren.jpg" class="cover">
+<img src="veil.jpg" class="cover">
 
-<div class="title">
-Frieren
+<div class="card-title">
+Veil
 </div>
 
-<div class="tags">
-
-<div class="tag">Completed</div>
-
-<div class="tag">★★★★★</div>
-
+<div class="status">
+Reading
 </div>
 
-<div class="quote">
-"I already miss them."
+<div class="progress">
+Volume 4
 </div>
 
-</div>
-
+<div class="comment">
+"every page feels like art."
 </div>
 
 </div>
 
-<div class="divider">
-🐺 ✦ 🐺 ✦ 🐺
+<div class="card">
+
+<img src="nana.jpg" class="cover">
+
+<div class="card-title">
+Nana
 </div>
 
-<div class="section">
+<div class="status">
+Re-reading
+</div>
 
-<h2>Books</h2>
+<div class="progress">
+Volume 8
+</div>
+
+<div class="comment">
+"my yearly heartbreak."
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="pandora.jpg" class="cover">
+
+<div class="card-title">
+Pandora Hearts
+</div>
+
+<div class="status">
+Planning
+</div>
+
+<div class="progress">
+Next read
+</div>
+
+<div class="comment">
+"i already know i'll obsess."
+</div>
+
+</div>
+
+</div>
+
+
+<img class="divider"
+src="TUO-DIVISORE2.png">
+
+
+<h2>
+<span>☾</span> <i>books</i>
+</h2>
 
 <div class="grid">
 
 <div class="card">
 
-<img src="hg.jpg" class="cover">
+<img src="hungergames.jpg" class="cover">
 
-<div class="title">
+<div class="card-title">
 The Ballad of Songbirds and Snakes
 </div>
 
-<div class="tags">
-
-<div class="tag">Reading</div>
-
-<div class="tag">Page 214</div>
-
+<div class="status">
+Reading
 </div>
 
-<div class="quote">
-"I don't want this story to end."
+<div class="progress">
+Page 214
 </div>
 
-</div>
-
+<div class="comment">
+"i don't want this book to end."
 </div>
 
 </div>
 
-<div class="divider">
-🩸 ★ 🩸 ★ 🩸
+<div class="card">
+
+<img src="howl.jpg" class="cover">
+
+<div class="card-title">
+Howl's Moving Castle
 </div>
 
-<div class="section">
+<div class="status">
+Favourite
+</div>
 
-<h2>Playlist</h2>
+<div class="progress">
+∞
+</div>
+
+<div class="comment">
+"one of my comfort books."
+</div>
+
+</div>
+
+</div>
+
+
+<img class="divider"
+src="TUO-DIVISORE3.png">
+
+
+<h2>
+<span>☾</span> <i>music</i>
+</h2>
 
 <div class="playlist">
 
 <p>
 
-songs that smell like rain,
-
-wolves,
-
-old churches,
-
-black eyeliner,
-
-red velvet
-
+songs that smell like rain,<br>
+wolves,<br>
+old churches,<br>
+black eyeliner,<br>
+red velvet<br>
 and october.
 
 </p>
 
-<a href="" class="button">
+<a href="METTI-QUI-LINK-PLAYLIST"
+class="play-button">
 
 open playlist ♡
 
@@ -381,16 +479,70 @@ open playlist ♡
 
 </div>
 
+
+<img class="divider"
+src="TUO-DIVISORE4.png">
+
+
+<h2>
+<span>☾</span> <i>currently creating</i>
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="website.jpg" class="cover">
+
+<div class="card-title">
+Personal Website
 </div>
 
-<div class="footer">
+<div class="status">
+In Progress
+</div>
 
-made with too much caffeine and hyperfixations.
+<div class="progress">
+Too many ideas.
+</div>
 
+<div class="comment">
+"this page exists because i couldn't stop."
 </div>
 
 </div>
+
+<div class="card">
+
+<img src="story.jpg" class="cover">
+
+<div class="card-title">
+Worldbuilding
+</div>
+
+<div class="status">
+Thinking
+</div>
+
+<div class="progress">
+Always.
+</div>
+
+<div class="comment">
+"maps, gods and forests."
+</div>
+
+</div>
+
+</div>
+
+
+<p class="footer">
+
+thank you for visiting my little corner of the internet ♡
+
+</p>
 
 </body>
 
-</html>
+  </html>
