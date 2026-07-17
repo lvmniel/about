@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>currently obsessed</title>
 
@@ -14,7 +13,7 @@
 
 body{
     zoom:1;
-    background:#ffffff;
+    background:#f3f3f3;
     color:#2f2f2f;
     font-family:Georgia, serif;
 
@@ -22,14 +21,14 @@ body{
     margin:auto;
     padding:50px 8px;
 
-    font-size:20px;
+    font-size:30px;
     line-height:1.7;
 }
 
 /* ---------- TITOLO ---------- */
 
 h1{
-    font-size:52px;
+    font-size:78px;
     margin-bottom:8px;
     font-weight:bold;
 }
@@ -38,8 +37,24 @@ h1{
 
 .info{
     color:#808080;
-    font-size:20px;
+    font-size:33px;
     margin-bottom:30px;
+}
+
+/* ---------- FRANCOBOLLI ---------- */
+
+.stamp-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+}
+
+.stamp{
+    width:260px;
+    height:auto;
 }
 
 /* ---------- DIVISORI ---------- */
@@ -52,10 +67,34 @@ h1{
     margin-bottom:60px;
 }
 
+/* ---------- BOTTONI ---------- */
+
+.buttons img{
+    height:38px;
+    width:auto;
+}
+
+/* ---------- MINI ICONE ---------- */
+
+.pixel{
+    width:35px;
+    height:auto;
+    vertical-align:middle;
+}
+
+/* ---------- FLAGS ---------- */
+
+.flags{
+    width:35px;
+    height:auto;
+    vertical-align:middle;
+    margin-right:0;
+}
+
 /* ---------- TITOLI ---------- */
 
 h2{
-    font-size:22px;
+    font-size:44px;
     font-weight:normal;
     margin-top:65px;
     margin-bottom:25px;
@@ -66,6 +105,18 @@ h2{
 
 p{
     margin-bottom:23px;
+}
+
+/* ---------- CENTRATO ---------- */
+
+.centro{
+    text-align:center;
+}
+
+/* ---------- DESTRA ---------- */
+
+.right{
+    text-align:right;
 }
 
 /* ---------- LINK ---------- */
@@ -82,130 +133,104 @@ a:hover{
 /* ---------- IMMAGINI ---------- */
 
 img{
-    aspect-ratio:1/1;
     max-width:100%;
 }
 
-/* =======================================================
-                    NUOVE CARD
-======================================================= */
+/* ===================================================
+                    CURRENTLY CARDS
+=================================================== */
 
-.grid{
-.grid{
+.current-card{
 
-display:flex;
+    display:flex;
 
-flex-wrap:wrap;
+    align-items:center;
 
-justify-content:center;
+    gap:18px;
 
-gap:14px;
+    background:#323232;
 
-}
+    border-radius:18px;
 
-/* Su schermi molto piccoli */
+    padding:16px;
 
-@media(max-width:500px){
+    margin-bottom:22px;
 
-.grid{
-
-gap:12px;
+    transition:.2s;
 
 }
 
-}
+.current-card:hover{
 
-.card{
-
-background:#2f2f2f;
-
-border-radius:18px;
-
-width:155px;
-
-padding:14px;
-
-transition:.25s;
-
-box-shadow:0 5px 12px rgba(0,0,0,.08);
-
-}
-
-.card:hover{
-
-transform:translateY(-3px);
-
-box-shadow:0 8px 18px rgba(128,0,0,.20);
+    transform:translateX(4px);
 
 }
 
 .cover{
 
-width:100%;
+    width:100px;
 
-aspect-ratio:1/1.25;
+    height:100px;
 
-object-fit:cover;
+    object-fit:cover;
 
-border-radius:12px;
+    border-radius:12px;
 
-margin-bottom:12px;
+    flex-shrink:0;
 
-display:block;
+}
+
+.card-info{
+
+    flex:1;
 
 }
 
 .card-title{
 
-font-size:22px;
+    color:white;
 
-font-weight:bold;
+    font-size:26px;
 
-color:white;
+    font-weight:bold;
 
-line-height:1.2;
+    margin-bottom:6px;
 
-margin-bottom:10px;
-
-}
-
-.status{
-
-display:inline-block;
-
-background:#800000;
-
-color:white;
-
-padding:4px 10px;
-
-border-radius:999px;
-
-font-size:11px;
-
-margin-bottom:10px;
+    line-height:1.2;
 
 }
 
-.progress{
+.card-status{
 
-font-size:17px;
+    color:#800000;
 
-color:#d8d8d8;
+    font-size:19px;
 
-margin-bottom:10px;
+    font-style:italic;
+
+    margin-bottom:6px;
 
 }
 
-.comment{
+.card-progress{
 
-font-size:13px;
+    color:#d8d8d8;
 
-font-style:italic;
+    font-size:18px;
 
-color:#bdbdbd;
+    margin-bottom:8px;
 
-line-height:1.4;
+}
+
+.card-comment{
+
+    color:#bdbdbd;
+
+    font-size:18px;
+
+    font-style:italic;
+
+    line-height:1.4;
 
 }
 
@@ -213,55 +238,45 @@ line-height:1.4;
 
 .playlist{
 
-background:#2f2f2f;
+    background:#323232;
 
-border-radius:18px;
+    border-radius:18px;
 
-padding:22px;
+    padding:22px;
 
-margin-top:20px;
-
-text-align:center;
-
-box-shadow:0 5px 12px rgba(0,0,0,.08);
+    text-align:center;
 
 }
 
 .playlist p{
 
-color:#d8d8d8;
+    color:#d8d8d8;
 
-font-size:20px;
-
-margin-bottom:20px;
-
-line-height:1.6;
+    font-size:22px;
 
 }
 
 .play-button{
 
-display:inline-block;
+    display:inline-block;
 
-padding:8px 18px;
+    margin-top:15px;
 
-background:#800000;
+    background:#800000;
 
-color:white;
+    color:white;
 
-border-radius:999px;
+    padding:8px 18px;
 
-font-size:18px;
-
-transition:.2s;
+    border-radius:999px;
 
 }
 
 .play-button:hover{
 
-background:#5e0000;
+    color:white;
 
-color:white;
+    background:#5f0000;
 
 }
 
@@ -269,13 +284,11 @@ color:white;
 
 .footer{
 
-text-align:center;
+    text-align:center;
 
-font-size:20px;
+    color:#777;
 
-color:#777;
-
-margin-top:60px;
+    margin-top:60px;
 
 }
 
@@ -287,15 +300,14 @@ margin-top:60px;
 <h1>𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲⋆‧₊˚</h1>
 
 <div class="info">
-updated whenever i remember...
+by Ren • updated whenever i remember
 </div>
 
 <img class="divider"
-src="TUO-DIVISORE.png">
+src="tumblr_1f1eb6b7ee37398c604f9f46b221eee3_13db73e7_1280.png">
 
-
-<p style="text-align:center; color:#666; font-style:italic;">
-things currently haunting my brain...
+<p class="centro">
+<i>things currently haunting my brain...</i>
 </p>
 
 
@@ -303,92 +315,80 @@ things currently haunting my brain...
 <span>☾</span> <i>animanga</i>
 </h2>
 
-<div class="grid">
-
-<div class="card">
+<div class="current-card">
 
 <img src="obito.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
 Naruto Shippuden
 </div>
 
-<div class="status">
-Watching
+<div class="card-status">
+currently watching
 </div>
 
-<div class="progress">
-Episode 317
+<div class="card-progress">
+episode 317
 </div>
 
-<div class="comment">
+<div class="card-comment">
 "comfort anime forever."
 </div>
 
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="current-card">
 
 <img src="veil.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
 Veil
 </div>
 
-<div class="status">
-Reading
+<div class="card-status">
+currently reading
 </div>
 
-<div class="progress">
-Volume 4
+<div class="card-progress">
+volume 4
 </div>
 
-<div class="comment">
-"every page feels like art."
+<div class="card-comment">
+"every page feels like a painting."
 </div>
 
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="current-card">
 
 <img src="nana.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
 Nana
 </div>
 
-<div class="status">
-Re-reading
+<div class="card-status">
+thinking about
 </div>
 
-<div class="progress">
-Volume 8
+<div class="card-progress">
+always.
 </div>
 
-<div class="comment">
+<div class="card-comment">
 "my yearly heartbreak."
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="pandora.jpg" class="cover">
-
-<div class="card-title">
-Pandora Hearts
-</div>
-
-<div class="status">
-Planning
-</div>
-
-<div class="progress">
-Next read
-</div>
-
-<div class="comment">
-"i already know i'll obsess."
 </div>
 
 </div>
@@ -397,55 +397,60 @@ Next read
 
 
 <img class="divider"
-src="TUO-DIVISORE2.png">
+src="tumblr_1cef55632f84ef55c83bf3feb83c866e_f9346ade_1280.png">
 
 
 <h2>
 <span>☾</span> <i>books</i>
 </h2>
 
-<div class="grid">
-
-<div class="card">
+<div class="current-card">
 
 <img src="hungergames.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
 The Ballad of Songbirds and Snakes
 </div>
 
-<div class="status">
-Reading
+<div class="card-status">
+currently reading
 </div>
 
-<div class="progress">
-Page 214
+<div class="card-progress">
+page 214
 </div>
 
-<div class="comment">
-"i don't want this book to end."
+<div class="card-comment">
+"i don't want it to end."
 </div>
 
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="current-card">
 
 <img src="howl.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
 Howl's Moving Castle
 </div>
 
-<div class="status">
-Favourite
+<div class="card-status">
+comfort book
 </div>
 
-<div class="progress">
+<div class="card-progress">
 ∞
 </div>
 
-<div class="comment">
-"one of my comfort books."
+<div class="card-comment">
+"it feels like home."
 </div>
 
 </div>
@@ -454,11 +459,11 @@ Favourite
 
 
 <img class="divider"
-src="TUO-DIVISORE3.png">
+src="tumblr_071a10aea8c6d3624f910ee30ac81f48_e010ea25_1280.png">
 
 
 <h2>
-<span>☾</span> <i>music</i>
+<span>☾</span> <i>playlist</i>
 </h2>
 
 <div class="playlist">
@@ -467,14 +472,14 @@ src="TUO-DIVISORE3.png">
 
 songs that smell like rain,<br>
 wolves,<br>
-old churches,<br>
 black eyeliner,<br>
-red velvet<br>
-and october.
+old churches,<br>
+october nights<br>
+and forgotten cemeteries.
 
 </p>
 
-<a href="METTI-QUI-LINK-PLAYLIST"
+<a href="METTI-QUI-IL-LINK"
 class="play-button">
 
 open playlist ♡
@@ -485,61 +490,72 @@ open playlist ♡
 
 
 <img class="divider"
-src="TUO-DIVISORE4.png">
+src="tumblr_1f1eb6b7ee37398c604f9f46b221eee3_13db73e7_1280.png">
 
 
 <h2>
 <span>☾</span> <i>currently creating</i>
 </h2>
 
-<div class="grid">
-
-<div class="card">
+<div class="current-card">
 
 <img src="website.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
 Personal Website
 </div>
 
-<div class="status">
-In Progress
+<div class="card-status">
+work in progress
 </div>
 
-<div class="progress">
-Too many ideas.
+<div class="card-progress">
+too many ideas.
 </div>
 
-<div class="comment">
+<div class="card-comment">
 "this page exists because i couldn't stop."
 </div>
 
 </div>
 
-<div class="card">
+</div>
 
-<img src="story.jpg" class="cover">
+
+<div class="current-card">
+
+<img src="world.jpg" class="cover">
+
+<div class="card-info">
 
 <div class="card-title">
-Worldbuilding
+Fantasy World
 </div>
 
-<div class="status">
-Thinking
+<div class="card-status">
+worldbuilding
 </div>
 
-<div class="progress">
-Always.
+<div class="card-progress">
+always.
 </div>
 
-<div class="comment">
-"maps, gods and forests."
+<div class="card-comment">
+"maps, myths and forests."
 </div>
 
 </div>
 
 </div>
 
+
+<p class="centro">
+
+✦ ───── ☾ ───── ✦
+
+</p>
 
 <p class="footer">
 
@@ -549,4 +565,4 @@ thank you for visiting my little corner of the internet ♡
 
 </body>
 
-  </html>
+</html>
