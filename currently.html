@@ -20,11 +20,70 @@ body{
     max-width:700px;
     margin:auto;
     padding:50px 8px;
+    animation:fade .35s ease;
+
 
     font-size:30px;
     line-height:1.7;
 }
 
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+/* ---------- TENDINA ---------- */
+.menu{
+
+    font-size:22px;
+
+    margin-bottom:30px;
+
+    color:#6f6f6f;
+
+}
+
+.menu summary{
+
+    cursor:pointer;
+
+    list-style:none;
+
+}
+
+.menu summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.menu a{
+
+    display:block;
+
+    margin-top:8px;
+
+    margin-left:18px;
+
+    color:#800000;
+
+}
+
+.menu a:hover{
+
+    color:black;
+
+}
 /* ---------- TITOLO ---------- */
 
 h1{
@@ -375,6 +434,7 @@ font-size:56px;
 </head>
 <body>
 
+
 <div class="archive-title">
 
 <span class="star s1">★</span>
@@ -392,6 +452,16 @@ font-size:56px;
 <div class="info">
 by Ren • updated whenever i remember
 </div>
+
+<details class="menu">
+
+<summary>✦ contents</summary>
+
+<a href="index.html">about</a><br>
+
+<a href="archive.html">archive</a>
+
+</details>
 
 <img class="divider"
 src="tumblr_1f1eb6b7ee37398c604f9f46b221eee3_13db73e7_1280.png">
